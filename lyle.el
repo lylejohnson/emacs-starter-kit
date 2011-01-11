@@ -20,6 +20,17 @@
   )
 )
 
+; The following will create a tags file if none exists.
+; Just hit `M-.’ and you’re off.
+; From http://www.emacswiki.org/emacs/TagsFile
+(defadvice find-tag (before c-tag-file activate)
+  "Automatically create tags file."
+  (let ((tag-file (concat default-directory "TAGS")))
+    (unless (file-exists-p tag-file)
+      (shell-command (format "%s -f TAGS -e -R --langmap=Lisp:+.clj" path-to-ctags)))
+    (visit-tags-table tag-file)))
+
+
 ;; Org mode customizations per the tutorial
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-modee))
