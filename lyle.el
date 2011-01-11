@@ -37,3 +37,7 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+
+;; CoffeeScript
+(add-to-list 'load-path "~/.emacs.d/lyle/coffee-mode")
+(require 'coffee-mode)
