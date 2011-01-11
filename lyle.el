@@ -5,6 +5,8 @@
 ;; Additional package archives
 (add-to-list 'package-archives
              '("technomancy" . "http://repo.technomancy.us/emacs/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages"))
 
 ; Where's ctags?
 (setq path-to-ctags "/usr/local/bin/ctags")
