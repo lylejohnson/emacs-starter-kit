@@ -1,4 +1,8 @@
-;; Put user-specific configuration stuff in here.
+; Set default frame size to 120x40
+(add-to-list 'default-frame-alist '(height . 40))
+(add-to-list 'default-frame-alist '(width . 120))
+
+;; Additional package archives
 (add-to-list 'package-archives
              '("technomancy" . "http://repo.technomancy.us/emacs/") t)
 
