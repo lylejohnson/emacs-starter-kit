@@ -6,13 +6,16 @@
 (add-to-list 'package-archives
              '("technomancy" . "http://repo.technomancy.us/emacs/") t)
 
-; 
-(setq path-to-ctags "/usr/local/bin/ctags") ;; <- your ctags path here
+; Where's ctags?
+(setq path-to-ctags "/usr/local/bin/ctags")
+
+; Interactively create a TAGS file somewhere
 (defun create-tags-file (dir-name)
   "Create tags file."
   (interactive "DDirectory: ")
   (shell-command
-  (format "%s -f %s/TAGS -e -R --langmap=Lisp:+.clj %s" path-to-ctags dir-name (directory-file-name dir-name)))
+    (format "%s -f %s/TAGS -e -R --langmap=Lisp:+.clj %s" path-to-ctags dir-name (directory-file-name dir-name))
+  )
 )
 
 ;; Org mode customizations per the tutorial
