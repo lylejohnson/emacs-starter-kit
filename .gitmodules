@@ -1,0 +1,3 @@
+[submodule "lyle/coffee-mode"]
+	path = lyle/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
