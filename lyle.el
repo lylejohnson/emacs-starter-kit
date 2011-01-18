@@ -56,3 +56,9 @@
 
 ;; Rinari
 (setq rinari-tags-file-name "TAGS")
+
+;; Cucumber mode
+(add-to-list 'load-path "~/.emacs.d/lyle/feature-mode")
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
