@@ -1,3 +1,6 @@
 [submodule "lyle/coffee-mode"]
 	path = lyle/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
+[submodule "lyle/feature-mode"]
+	path = lyle/feature-mode
+	url = https://github.com/michaelklishin/cucumber.el.git
