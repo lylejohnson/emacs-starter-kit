@@ -62,3 +62,7 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
+;; Scala mode
+(add-to-list 'load-path "~/.emacs.d/lyle/scala-mode")
+(require 'scala-mode-auto)
+
