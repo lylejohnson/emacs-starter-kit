@@ -66,3 +66,8 @@
 (add-to-list 'load-path "~/.emacs.d/lyle/scala-mode")
 (require 'scala-mode-auto)
 
+; Colors
+(require 'color-theme)
+(load-file "~/.emacs.d/lyle/color-theme-vibrant-ink.el")
+(color-theme-vibrant-ink)
+
